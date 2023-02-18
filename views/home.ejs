@@ -1,6 +1,6 @@
 <%-include('partials/header');-%> 
 <h1>Home</h1>
-<p><%=homeStartingContent %></p>
+<p><%= homeStartingContent %></p>
 <% compose_data.forEach(function(data){ %> 
   <h3><%= data.title %></h3>
   <p><%= data.content.substring(0,100) + "....." %>
