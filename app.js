@@ -52,7 +52,8 @@ app.post("/compose", function(req, res){
 app.get("/posts/:postId", function(req, res){
 
 const requestedPostId = req.params.postId;
-  Post.findMany({_id: requestedPostId}, function(err, post){
+console.log(requestedPostId);
+  Post.findOne({title: requestedPostId}, function(err, post){
     res.render("post", {
       title: post.title,
       content: post.content
